@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuarios</title>
+    <link rel="icon" href="../formularios/img/perromanchado.avif">
+    <link rel="stylesheet" href="css/estilo.css">
+   
+    <script>
+        function validarContraseñas() {
+            var contraseña1 = document.getElementById("contraseña1").value;
+            var contraseña2 = document.getElementById("contraseña2").value;
+
+            if (contraseña1 !== contraseña2) {
+                alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+                return false; // Evita que el formulario se envíe si las contraseñas no coinciden.
+            }else{
+                alert("Las contraseñas coinciden, se envio el formulario.")
+            return true; // Permite que el formulario se envíe si las contraseñas coinciden.
+        }}
+      </script>
+</head>
+<body>
+    <header>
+        <h1>Registro de usuarios</h1>
+    </header>
+    <div class="contenido">
+        <form class="form-basico" action="#"  onsubmit="return validarContraseñas();">
+         <div class="titulo">
+             <h2>Registro usuarios nuevos</h2>
+         </div>
+        <div class="entrada">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="nombre" name="nombre" required>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+              </svg></div>
+        <div class="entrada">
+            <label>Tipo de documento</label>
+            <select name="select">
+                <option>Tarjeta de Identidad</option>
+                <option>Cedula de ciudadania</option>
+                <option>Cedula de Extranjeria</option>
+            </select></div>  
+        <div class="entrada">
+            <label>Numero de Identificacion</label>
+            <input type="number" placeholder="numero" name="nombre" required>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                </svg></div>
+        <div class="entrada">
+            <label>Direccion</label>
+            <input type="text" placeholder="direccion" name="nombre" required>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                </svg></div>
+        <div class="entrada">
+        <label>Telefono Celular</label>
+        <input type="number" placeholder="Numero" name="nombre" required>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+            </svg></div>
+        <div class="entrada">
+            <label>Correo Electronico</label>
+            <input type="text" placeholder="Correo" name="nombre" required>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                </svg></div>
+        <div class="entrada">
+            <label for="contraseña1">Contraseña:</label>
+            <input type="password" id="contraseña1" required>
+            <br>
+            <label for="contraseña2">Repetir contraseña:</label>
+            <input type="password" id="contraseña2" required>
+            <br>
+            <input type="submit" value="Registrar"></div>
+    
+
+ 
+   
+
+        </form>
+        </div>
+        <div class="menu">
+            <ul>
+                <li> <a href="index.html">Inicio</a></li>
+
+                <li> <a href="basicos.html" >Entradas Basicas</a></li>
+                <li> <a href="registro.html" class="activo">Form Registro</a></li>
+                <li> <a href="iniciosesion.html">Iniciar Sesion</a></li>
+                <li> <a href="busqueda.html">Form Busqueda</a></li>
+                <li> <a href="validar.html">Form Validacion</a></li>
+            </ul>
+
+        </div>
+        
+        
+    </div>
+
+    
+</body>
+</html>
